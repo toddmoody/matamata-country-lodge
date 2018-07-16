@@ -1,0 +1,9 @@
+@import "@material/button/mdc-button";
+
+$player: rgba(0, 204, 204, 0.61);
+
+.foo-button {
+  @include mdc-button-filled-accessible($player);
+  @include mdc-button-ink-color(teal);
+  @include mdc-states(teal);
+}
