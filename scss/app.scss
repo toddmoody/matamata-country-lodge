@@ -1,0 +1,327 @@
+/*
+* === Import statements ===
+*/
+
+@import "@material/button/mdc-button";
+@import "~bootstrap/scss/bootstrap";
+@import "node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Poly');
+
+/*
+* === SASS color variables ===
+*/
+
+$accent-sec: #AEAD9D;
+$grey-light: rgb(241, 241, 241);
+$slate: #4A4A4A;
+$credits: rgb(121, 121, 121);
+$green: #2F5F55;
+$bgrd: #FFF;
+
+/*
+* === Global styles ===
+*/
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: $bgrd;
+}
+
+button {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.btn-outline-secondary {
+  color: $accent-sec;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  padding: 0.95rem 1.85rem;
+  border-color: $accent-sec;
+  border-radius: 3px;
+}
+
+.btn-outline-secondary:hover {
+  background: $accent-sec;
+  border-color: $accent-sec;
+}
+
+h1 {
+  font-family: 'Poly', serif;
+}
+
+h2, h3 {
+  font-family: 'Open Sans', sans-serif;
+  color: $slate;
+}
+
+p {
+  font-family: 'Poly', serif;
+  color: $slate;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+hr {
+  margin: 0;
+}
+
+.arrow {
+  color: $credits;
+  font-size: 1.05rem;
+  margin-left: 0.65rem;
+  transition: all 0.5s;
+}
+
+// announcement bar
+.alert-warning {
+  color: #FFF;
+  background-color: $accent-sec;
+  border-color: $accent-sec;
+  border-radius: 0;
+  margin-bottom: 0;
+  text-align: center;
+  }
+
+//navbar 
+nav {
+  height: 115px;
+  // .transparent {
+  //   border-width: 0px;
+  //   -webkit-box-shadow: 0px 0px;
+  //   box-shadow: 0px 0px;
+  //   background-color: rgba(0,0,0,0.0);
+  //   background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
+  //   background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+  //   background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+  // }
+  .navbar-brand {
+    font-family: 'Poly', serif;
+    font-size: 1.45rem;
+  }
+}
+.btn-outline-success {
+  color: $slate;
+  border-color: $slate;
+  margin-top: 12px;
+  transition: all 0.5s;
+}
+.btn-outline-success:hover {
+  background: $slate;
+  border-color: $slate;
+} 
+
+/*
+* === Home page styles ===
+*/
+
+  // header section
+  header {
+    background: url(./../assets/header-bgrd.jpg);
+    background-size: cover;
+    background-position: center;
+    .jumbotron {
+      background: transparent;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      height: 75vh;
+      .lead {
+        color: #FFF;
+      }
+      .display-4 {
+        color: #FFF;
+        font-family: 'Poly', serif;
+      }
+    }
+  }
+
+  //intro section 
+  .intro-container {
+    padding: 130px 0;
+    div {
+      div {
+        .intro-img {
+          max-height: 550px;
+          border-radius: 3px;
+        }
+      }
+      div {
+        h3 {
+          font-size: 1.85rem;
+          margin-bottom: 24px;
+        }
+        .separator {
+          
+        }
+        p {
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+
+  //quicklinks section 
+  .quick-container {
+    padding: 130px 0;
+    div {
+      h2 {
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 24px;
+      }
+    }
+    .quick-link {
+      font-size: 1.15rem;
+      color: $slate;
+      border: 1px solid $accent-sec;
+      padding: 2.05rem 1.65rem;
+      margin: 0.65rem 0.65rem;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: all 0.5s;
+    }
+    .quick-link:hover {
+      color: #FFF;
+      background: $accent-sec;
+      padding: 2.05rem 1.65rem;
+      margin: 0.65rem 0.65rem;
+      border-radius: 3px;
+      text-decoration: none;
+      .arrow {
+        color: #FFF;
+        margin-left: 1.35rem;
+      }
+    }
+  }
+
+  // Family banner section
+  .family-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 60vh;
+    padding: 130px 0;
+    background: url(./../assets/family-bgrd.jpg);
+    background-size: cover;
+    background-position: center;
+    h1 {
+      color: #FFF;
+      margin-bottom: 3.65rem;
+    }
+    button {
+      color: #FFF;
+      border-color: #FFF;
+      font-size: 0.95rem;
+      padding: 0.95rem 1.85rem;
+      transition: all 0.5s;
+    }
+    button:hover {
+      color: $slate;
+      background-color: #FFF;
+    }
+  }
+
+  // tour (video section)
+  .tour-container {
+    padding: 130px 0;
+    h2 {
+      margin-bottom: 3.65rem;
+    }
+  }
+
+/*
+* === Home page media queries ===
+*/
+
+@include media-breakpoint-up(sm) { 
+    
+
+
+}
+
+@include media-breakpoint-up(md) { 
+  
+
+
+}
+
+/*
+* === Global footer ===
+*/
+  
+  #footer {
+    background-color: #FFF;
+    .logo-strip {
+      background: $grey-light;
+      padding: 4.65rem 6.65rem;
+        img:nth-child(2) {
+          width: 150px;
+        }
+        img:nth-child(3) {
+          width: 150px;
+        }
+        img:nth-child(4) {
+          width: 190px;
+        }
+    }
+
+    .cta {
+      background: $green;
+      padding: 5.65rem 0;
+      text-align: center;
+      h2 {
+        color: #FFF;
+        font-family: 'Poly', serif;
+      }
+      button {
+        color: #FFF;
+        border-color: #FFF;
+      }
+      button:hover {
+        background-color: $accent-sec;
+      }
+    }
+
+    .credits-container {
+      text-align: center;
+      padding: 100px 0;
+      p {
+        color: $credits;
+      }
+      i {
+        font-size: 34px;
+        margin: 2rem 0.85rem;
+        color: $slate;
+        transition: all 0.5s;
+      }
+      i:hover {
+        color: $green;
+      }
+      .moods {
+        color: $credits;
+        text-decoration: none;
+        border-bottom: 1px dotted $credits;
+        padding-bottom: 0.35rem;
+        transition: all 0.5s;
+      }
+      .moods:hover {
+        color: $green;
+        border-bottom: 1px solid $green;
+      }
+    }
+}
+
+
+  
+
+
+
+  
+

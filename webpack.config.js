@@ -1,7 +1,7 @@
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
-  entry: ['./app.scss', './app.js'],
+  entry: ['./scss/app.scss', './app.js'],
   output: {
     filename: 'bundle.js',
   },
@@ -30,6 +30,21 @@ module.exports = {
             },
           }],
       },
+
+
+      {
+        test: /\.(png|jp(e*)g|svg)$/,  
+        use: [{
+            loader: 'url-loader',
+            options: { 
+                limit: 8000, // Convert images < 8kb to base64 strings
+                name: 'images/[hash]-[name].[ext]'
+            } 
+        }]
+      },
+
+
+
       {
         test: /\.js$/,
         loader: 'babel-loader',
@@ -38,4 +53,5 @@ module.exports = {
         },
       }],
   },
+  watch: true
 };
